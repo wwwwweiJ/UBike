@@ -5,6 +5,9 @@ const ul = document.querySelector(".siteList")
 
 checkBtn.addEventListener("click" , (x)=>{
     x.preventDefault()
+    while(ul.lastChild){
+        ul.removeChild(ul.lastChild)
+    }
     getInfo(textInput.value)
 })
 async function getInfo(address){
