@@ -4,6 +4,7 @@ const checkBtn = document.querySelector(".btn-success") //找到送出表單的�
 const ul = document.querySelector(".siteList") //找出要新增元素的親層
 
 checkBtn.addEventListener("click" , (x)=>{
+    ul.innerHTML = '' //在每次搜尋前，將上一次結果清除
     x.preventDefault() //設定按鈕的click事件預設消除，以免按下按鈕直接送出表單
     getInfo(textInput.value) //按下按鈕時找出輸入欄輸入的值
 })
